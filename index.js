@@ -18,7 +18,10 @@ function AddPersonForm() {
         placeholder="Add new contact" 
         onChange={handleChange} 
         value={person.name} />
-      <button type="submit">Add</button>
+      <button type="submit" OnClick={()=>{
+
+        //contacts.push(person.name)
+      }}>Add</button>
     </form>
   );
 }
