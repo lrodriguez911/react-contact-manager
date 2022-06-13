@@ -11,8 +11,9 @@ function AddPersonForm() {
   }
     
   function handleSubmit(e) {
+    contacts.push(person.name)
     e.preventDefault();
-    contacts.push(e)
+    
   }
   return (
     <form onSubmit={handleSubmit}>
@@ -21,7 +22,7 @@ function AddPersonForm() {
         onChange={handleChange} 
         value={person.name} />
       <button type="submit" onClick={()=>{
-        handleSubmit()
+        handleChange()
       }}>Add</button>
     </form>
   );
